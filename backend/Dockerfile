@@ -9,6 +9,11 @@ RUN apt-get update && \
 # Set up a working directory
 WORKDIR /app
 
+# Set up Python virtual environment and install ytmusicapi
+RUN python3 -m venv /app/venv
+ENV PATH="/app/venv/bin:$PATH"
+RUN pip install ytmusicapi
+
 # Copy package.json and package-lock.json (if available)
 COPY package*.json ./
 
