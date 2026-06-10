@@ -1,5 +1,7 @@
 import express from 'express';
 import mongoose from 'mongoose';
+import { setupCronJobs } from './jobs/cron.js';
+import apiRouter from './routes/api.js';
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -11,10 +13,17 @@ app.get('/health', (req, res) => {
   res.json({ status: 'ok', message: 'Backend is alive' });
 });
 
+// Register API Routes
+app.use('/api', apiRouter);
+
 mongoose
   .connect(MONGO_URI)
   .then(() => {
     console.log('Successfully connected to MongoDB');
+
+    // Khởi tạo Cron Jobs
+    setupCronJobs();
+
     app.listen(PORT, () => {
       console.log(`Backend server is running on port ${PORT}`);
     });

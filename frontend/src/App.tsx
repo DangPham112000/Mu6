@@ -1,121 +1,36 @@
+/**
+ * ==========================================
+ * TODO (Phase 5): Frontend Features Checklist
+ * ==========================================
+ *
+ * 1. Setup Tailwind CSS & Shadcn/UI
+ *
+ * 2. Create UI Components for Configuration:
+ *    - Popup/Modal: Prompt user for YTM Cookie if `isCookieValid` is false or empty.
+ *    - Playlist Selector: Fetch user's playlists (via an API endpoint or backend bridge)
+ *      and allow them to select which playlists to sync. Save this to `syncedPlaylists`.
+ *
+ * 3. Dashboard UI with Shadcn Tabs:
+ *    - Tab 1 ("ACTIVE"): Display currently synced tracks using Shadcn Data Table.
+ *    - Tab 2 ("REMOVED"): Display missing/removed tracks with a RED BADGE.
+ *
+ * 4. Action Buttons:
+ *    - On each "REMOVED" track: Add "Find Alternative" button that opens:
+ *      `https://www.youtube.com/results?search_query=[Title]+[Artist]`
+ *    - Global Action: "Sync Now" button that calls `POST /api/sync/trigger`
+ *      and shows a loading spinner during the process.
+ */
+
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
-
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
+    <div style={{ padding: '2rem', fontFamily: 'sans-serif' }}>
+      <h1>YouTube Music Library Tracker</h1>
+      <p>Currently in Phase 3. Please refer to <code>src/App.tsx</code> to see the Phase 5 Frontend TODO list.</p>
+    </div>
   )
 }
 
