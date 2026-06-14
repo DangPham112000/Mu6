@@ -22,17 +22,14 @@
  *      and shows a loading spinner during the process.
  */
 
-import { useState } from 'react'
+import Dashboard from './components/dashboard/Dashboard';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div style={{ padding: '2rem', fontFamily: 'sans-serif' }}>
-      <h1>YouTube Music Library Tracker</h1>
-      <p>Currently in Phase 3. Please refer to <code>src/App.tsx</code> to see the Phase 5 Frontend TODO list.</p>
+    <div className="min-h-screen bg-background">
+      <Dashboard />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
