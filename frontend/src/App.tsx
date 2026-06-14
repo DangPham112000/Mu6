@@ -11,8 +11,9 @@
  *      and allow them to select which playlists to sync. Save this to `syncedPlaylists`.
  *
  * 3. Dashboard UI with Shadcn Tabs:
- *    - Tab 1 ("ACTIVE"): Display currently synced tracks using Shadcn Data Table.
- *    - Tab 2 ("REMOVED"): Display missing/removed tracks with a RED BADGE.
+ *    - TODO: Add Playlist Selector drop-down or sidebar to choose specific playlist context.
+ *    - Tab 1 ("ACTIVE"): Display currently synced tracks for the selected playlist using Shadcn Data Table. Fetch from `/api/tracks/active?playlistId=...`
+ *    - Tab 2 ("REMOVED"): Display missing/removed tracks for the selected playlist with a RED BADGE. Fetch from `/api/tracks/removed?playlistId=...`
  *
  * 4. Action Buttons:
  *    - On each "REMOVED" track: Add "Find Alternative" button that opens:
