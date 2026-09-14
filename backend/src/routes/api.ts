@@ -11,7 +11,7 @@ function escapeRegExp(string: string) {
 }
 
 // ==========================================
-// Phase 4: System Config / Auth APIs
+// System Config / Auth APIs
 // ==========================================
 
 // GET /api/config
@@ -82,7 +82,7 @@ router.post('/config/playlists', async (req, res) => {
 
 
 // ==========================================
-// Phase 4: Track Retrieval APIs
+// Track Retrieval APIs
 // ==========================================
 
 // Helper function to build track queries
@@ -183,7 +183,7 @@ router.get('/tracks/removed', async (req, res) => {
 
 
 // ==========================================
-// Phase 4: Sync Engine Manual Trigger
+// Sync Engine Manual Trigger
 // ==========================================
 
 // POST /api/sync/trigger
